@@ -1,10 +1,7 @@
 import { useId } from 'react'
 
 // Figma "Streak pet": Biscuit, the shared pet, drawn as one scalable SVG (60.8 × 68.4, the Floating pet size).
-// Resting = redesign (calm, eyes closed, "z z"). Body colors follow the streak mode tokens.
-//
-// Not in the token set yet (closest existing token used, flagged to the team):
-//   back leaf (Figma green/500), ground shadow, and the "z" color (Figma sage/700).
+// Resting = redesign (calm, eyes closed, "z z"). Colors follow the streak mode tokens (pet/*).
 
 export function StreakPet({ className = '' }: { className?: string }) {
   const bodyId = useId()
@@ -18,11 +15,11 @@ export function StreakPet({ className = '' }: { className?: string }) {
       </defs>
 
       {/* Ground shadow */}
-      <ellipse cx="28.5" cy="65.36" rx="20.9" ry="3.04" className="fill-pet-status" opacity="0.13" />
+      <ellipse cx="28.5" cy="65.36" rx="20.9" ry="3.04" className="fill-pet-shadow" />
 
       {/* Leaves */}
-      <ellipse cx="26.95" cy="3.95" rx="3.04" ry="4.56" transform="rotate(-30 26.95 3.95)" className="fill-pet-progress" />
-      <ellipse cx="29.23" cy="4.71" rx="3.04" ry="4.56" transform="rotate(30 29.23 4.71)" className="fill-pet-progress" />
+      <ellipse cx="26.95" cy="3.95" rx="3.04" ry="4.56" transform="rotate(-30 26.95 3.95)" className="fill-pet-leaf-back" />
+      <ellipse cx="29.23" cy="4.71" rx="3.04" ry="4.56" transform="rotate(30 29.23 4.71)" className="fill-pet-leaf-front" />
 
       {/* Body */}
       <rect x="5.7" y="8.36" width="45.6" height="53.2" rx="21.28" fill={`url(#${bodyId})`} />
@@ -48,7 +45,7 @@ export function StreakPet({ className = '' }: { className?: string }) {
       />
 
       {/* Sleeping z z */}
-      <g className="fill-pet-status" fontFamily="var(--font-family)" fontWeight="700">
+      <g className="fill-pet-zzz" fontFamily="var(--font-family)" fontWeight="700">
         <text x="48.64" y="16.4" fontSize="5.7">
           z
         </text>

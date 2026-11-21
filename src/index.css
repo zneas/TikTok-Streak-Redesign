@@ -182,6 +182,10 @@
   --color-pet-body-bottom: var(--pet-body-bottom);
   --color-pet-face: var(--pet-face);
   --color-pet-cheek: var(--pet-cheek);
+  --color-pet-leaf-back: var(--pet-leaf-back);
+  --color-pet-leaf-front: var(--pet-leaf-front);
+  --color-pet-shadow: var(--pet-shadow);
+  --color-pet-zzz: var(--pet-zzz);
   --color-task-done: var(--task-done-bg);
   --color-task-done-icon: var(--task-done-icon);
   --color-task-points: var(--task-points);

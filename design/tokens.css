@@ -28,6 +28,8 @@
   --prim-alpha-white-65: #ffffffa6;
   --prim-alpha-white-85: #ffffffd9;
   --prim-alpha-slate-45: #787e8c73;
+  --prim-alpha-forest-13: #334f3321;
+  --prim-alpha-night-13: #3d455921;
   --prim-indigo-50: #dce8ff;
   --prim-indigo-400: #5577e5;
   --prim-indigo-500: #4163e4;
@@ -194,6 +196,10 @@
   --pet-body-bottom: var(--prim-honey-body-bottom);
   --pet-face: var(--prim-honey-ink);
   --pet-cheek: var(--prim-blush-300);
+  --pet-leaf-back: var(--prim-green-500);
+  --pet-leaf-front: var(--prim-green-400);
+  --pet-shadow: var(--prim-alpha-forest-13);
+  --pet-zzz: var(--prim-sage-700);
   --task-done-bg: var(--prim-green-100);
   --task-done-icon: var(--prim-green-600);
   --task-points: var(--prim-green-600);
@@ -269,6 +275,7 @@
   --pet-body-bottom: var(--prim-frost-body-bottom);
   --pet-face: var(--prim-frost-900);
   --pet-cheek: var(--prim-frost-body-top);
+  --pet-shadow: var(--prim-alpha-night-13);
   --task-done-bg: var(--prim-neutral-150);
   --task-done-icon: var(--prim-neutral-500);
   --task-points: var(--prim-neutral-900);
