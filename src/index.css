@@ -1,0 +1,246 @@
+/* Design tokens are the single source of truth (generated from design/tokens.json).
+   Imported into the base layer so Tailwind utilities can still override the .text-* styles. */
+@import "../design/tokens.css" layer(base);
+@import "tailwindcss";
+
+/* Map the semantic tokens to short Tailwind names.
+   `inline` makes utilities reference the token variable directly, so data-streak="current" overrides keep working.
+   Names never map to themselves (that would be circular). */
+@theme inline {
+  /* Only our tokens: turn off Tailwind's default palette and scales */
+  --color-*: initial;
+  --font-*: initial;
+  --text-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --inset-shadow-*: initial;
+  --drop-shadow-*: initial;
+
+  /* 1 unit = 1px, so one-off Figma measurements read as-is (w-152 = 152px) */
+  --spacing: 1px;
+
+  /* Desktop shows the 360 × 784 phone frame from this width up; below it the app is full screen */
+  --breakpoint-phone: 500px;
+
+  /* Spacing (space/*) */
+  --spacing-2xs: var(--space-2xs);
+  --spacing-xs: var(--space-xs);
+  --spacing-sm: var(--space-sm);
+  --spacing-md: var(--space-md);
+  --spacing-lg: var(--space-lg);
+  --spacing-xl: var(--space-xl);
+  --spacing-2xl: var(--space-2xl);
+  --spacing-3xl: var(--space-3xl);
+
+  /* Sizes (size/*) */
+  --spacing-avatar-xs: var(--size-avatar-xs);
+  --spacing-avatar-sm: var(--size-avatar-sm);
+  --spacing-avatar-md: var(--size-avatar-md);
+  --spacing-avatar-lg: var(--size-avatar-lg);
+  --spacing-avatar-xl: var(--size-avatar-xl);
+  --spacing-icon-xs: var(--size-icon-xs);
+  --spacing-icon-sm: var(--size-icon-sm);
+  --spacing-icon-md: var(--size-icon-md);
+  --spacing-icon-lg: var(--size-icon-lg);
+  --spacing-icon-xl: var(--size-icon-xl);
+  --spacing-button: var(--size-control-button);
+  --spacing-input: var(--size-control-input);
+  --spacing-tap: var(--size-control-tap-target);
+  --spacing-status-bar: var(--size-control-status-bar);
+  --spacing-bottom-nav: var(--size-control-bottom-nav);
+  --spacing-header: var(--size-control-header);
+  --spacing-flame: var(--streak-label-flame-size);
+  --spacing-streak-gap: var(--streak-label-gap);
+
+  /* Icon glyph sizes (Material Symbols render at font-size) */
+  --text-icon-xs: var(--size-icon-xs);
+  --text-icon-sm: var(--size-icon-sm);
+  --text-icon-md: var(--size-icon-md);
+  --text-icon-lg: var(--size-icon-lg);
+  --text-icon-xl: var(--size-icon-xl);
+  --text-streak: var(--streak-label-font-size);
+  --font-weight-streak: var(--streak-label-font-weight);
+
+  /* Fonts */
+  --font-sans: var(--font-family);
+  --font-icon: "Material Symbols Rounded";
+
+  /* Backgrounds (color/bg/*) */
+  --color-canvas: var(--color-bg-canvas);
+  --color-subtle: var(--color-bg-subtle);
+  --color-sunken: var(--color-bg-sunken);
+  --color-pressed: var(--color-bg-pressed);
+  --color-inverse: var(--color-bg-inverse);
+  --color-scrim: var(--color-bg-scrim);
+  --color-toast: var(--color-bg-toast);
+  --color-media: var(--color-bg-media);
+  --color-media-scrim: var(--color-bg-media-scrim);
+  --color-lock-top: var(--color-bg-lock-top);
+  --color-lock-bottom: var(--color-bg-lock-bottom);
+  --color-notification: var(--color-bg-notification);
+
+  /* Text (color/text/*) */
+  --color-primary: var(--color-text-primary);
+  --color-secondary: var(--color-text-secondary);
+  --color-tertiary: var(--color-text-tertiary);
+  --color-disabled: var(--color-text-disabled);
+  --color-on-accent: var(--color-text-on-accent);
+  --color-link: var(--color-text-link);
+  --color-on-media: var(--color-text-on-media);
+
+  /* Icons (color/icon/*) */
+  --color-glyph: var(--color-icon-default);
+  --color-glyph-subtle: var(--color-icon-subtle);
+  --color-glyph-muted: var(--color-icon-muted);
+  --color-glyph-disabled: var(--color-icon-disabled);
+  --color-glyph-on-accent: var(--color-icon-on-accent);
+  --color-glyph-on-media: var(--color-icon-on-media);
+  --color-glyph-like: var(--color-icon-like);
+
+  /* Borders (color/border/*) */
+  --color-stroke-subtle: var(--color-border-subtle);
+  --color-stroke-handle: var(--color-border-handle);
+  --color-stroke-media: var(--color-border-on-media);
+  --color-stroke-bubble: var(--color-border-bubble);
+  --color-stroke-divider: var(--color-border-divider);
+
+  /* Accent (color/accent/*) */
+  --color-accent: var(--color-accent-default);
+  --color-accent-soft: var(--color-accent-subtle);
+  --color-story-start: var(--color-accent-story-start);
+  --color-story-end: var(--color-accent-story-end);
+
+  /* Bubbles, controls, buttons */
+  --color-bubble-out: var(--color-bubble-outgoing);
+  --color-bubble-in: var(--color-bubble-incoming);
+  --color-track-off: var(--color-control-track-off);
+  --color-track-on: var(--color-control-track-on);
+  --color-thumb: var(--color-control-thumb);
+  --color-segment: var(--color-control-segment-bg);
+  --color-segment-selected: var(--color-control-segment-selected);
+  --color-chip: var(--color-control-chip);
+  --color-chip-selected: var(--color-control-chip-selected);
+  --color-btn-primary: var(--color-button-primary-bg);
+  --color-btn-primary-text: var(--color-button-primary-text);
+  --color-btn-secondary: var(--color-button-secondary-bg);
+  --color-btn-secondary-text: var(--color-button-secondary-text);
+
+  /* Streak badges (color/badge/*) */
+  --color-tier-core: var(--color-badge-core);
+  --color-tier-3d: var(--color-badge-tier-3d);
+  --color-tier-10d: var(--color-badge-tier-10d);
+  --color-tier-30d: var(--color-badge-tier-30d);
+  --color-tier-100d: var(--color-badge-tier-100d);
+  --color-tier-200d: var(--color-badge-tier-200d);
+  --color-tier-locked: var(--color-badge-locked);
+  --color-tier-label: var(--color-badge-label-earned);
+  --color-tier-label-locked: var(--color-badge-label-locked);
+  --color-tier-connector: var(--color-badge-connector);
+
+  /* Media placeholders (color/media/*) */
+  --color-sand-a: var(--color-media-sand-a);
+  --color-sand-b: var(--color-media-sand-b);
+  --color-sand-ink: var(--color-media-sand-ink);
+  --color-mist-a: var(--color-media-mist-a);
+  --color-mist-b: var(--color-media-mist-b);
+  --color-mist-ink: var(--color-media-mist-ink);
+  --color-rose-a: var(--color-media-rose-a);
+  --color-rose-b: var(--color-media-rose-b);
+  --color-rose-ink: var(--color-media-rose-ink);
+  --color-night-a: var(--color-media-night-a);
+  --color-night-b: var(--color-media-night-b);
+
+  /* Avatars (color/avatar/*) */
+  --color-coral: var(--color-avatar-coral-bg);
+  --color-coral-ink: var(--color-avatar-coral-ink);
+  --color-sky: var(--color-avatar-sky-bg);
+  --color-sky-ink: var(--color-avatar-sky-ink);
+  --color-mint: var(--color-avatar-mint-bg);
+  --color-mint-ink: var(--color-avatar-mint-ink);
+  --color-lilac: var(--color-avatar-lilac-bg);
+  --color-lilac-ink: var(--color-avatar-lilac-ink);
+  --color-olive: var(--color-avatar-olive-bg);
+  --color-olive-ink: var(--color-avatar-olive-ink);
+  --color-peach: var(--color-avatar-peach-bg);
+  --color-peach-ink: var(--color-avatar-peach-ink);
+
+  /* Streak mode tokens (switch with data-streak="current") */
+  --color-flame-done: var(--streak-flame-done);
+  --color-flame-pending: var(--streak-flame-pending);
+  --color-count-done: var(--streak-count-done);
+  --color-count-pending: var(--streak-count-pending);
+  --color-pet-bg-top: var(--pet-bg-top);
+  --color-pet-bg-mid: var(--pet-bg-mid);
+  --color-pet-bg-bottom: var(--pet-bg-bottom);
+  --color-pet-chip-name: var(--pet-chip-name-bg);
+  --color-pet-chip-icon: var(--pet-chip-icon-bg);
+  --color-pet-chip-content: var(--pet-chip-content);
+  --color-pet-progress: var(--pet-progress-fill);
+  --color-pet-progress-text: var(--pet-progress-text);
+  --color-pet-status: var(--pet-status-text);
+  --color-pet-body-top: var(--pet-body-top);
+  --color-pet-body-bottom: var(--pet-body-bottom);
+  --color-pet-face: var(--pet-face);
+  --color-pet-cheek: var(--pet-cheek);
+  --color-task-done: var(--task-done-bg);
+  --color-task-done-icon: var(--task-done-icon);
+  --color-task-points: var(--task-points);
+}
+
+/* Radius and shadow tokens already use Tailwind's own names (--radius-sm, --shadow-sheet).
+   `reference` registers the utilities (rounded-sm, shadow-sheet) without re-declaring the variables,
+   so nothing maps to itself. */
+@theme inline reference {
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-full: var(--radius-full);
+  --shadow-thumb: var(--shadow-thumb);
+  --shadow-segment: var(--shadow-segment);
+  --shadow-device: var(--shadow-device);
+  --shadow-sheet: var(--shadow-sheet);
+}
+
+/* Material Symbols Rounded glyph (the Figma screens use this icon font) */
+@utility glyph {
+  font-family: var(--font-icon);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  display: inline-block;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 0, "GRAD" 0;
+  user-select: none;
+}
+
+@utility glyph-filled {
+  font-variation-settings: "FILL" 1, "GRAD" 0;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    color: var(--color-text-primary);
+    background: var(--color-bg-sunken);
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
