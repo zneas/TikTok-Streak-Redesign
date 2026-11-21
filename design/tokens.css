@@ -1,0 +1,296 @@
+/* Generated from tokens.json (Figma gyDuzNbMEwWqNEXWa207Uk). Do not hand-edit; regenerate. */
+/* Streak mode: Redesign is the default. Add data-streak="current" on any element to show today's TikTok look. */
+
+:root {
+  /* Primitives: reference only, use the semantic tokens below in components */
+  --prim-neutral-0: #ffffff;
+  --prim-neutral-25: #fafafa;
+  --prim-neutral-50: #f6f6f7;
+  --prim-neutral-100: #f1f1f2;
+  --prim-neutral-150: #efeff0;
+  --prim-neutral-200: #e4e4e7;
+  --prim-neutral-250: #d9d9de;
+  --prim-neutral-300: #c4c4c9;
+  --prim-neutral-350: #b4b4b9;
+  --prim-neutral-400: #a1a1a6;
+  --prim-neutral-500: #8a8b91;
+  --prim-neutral-600: #55565c;
+  --prim-neutral-700: #45464c;
+  --prim-neutral-800: #3a3b40;
+  --prim-neutral-900: #17181c;
+  --prim-neutral-950: #1d2230;
+  --prim-neutral-1000: #000000;
+  --prim-alpha-black-45: #00000073;
+  --prim-alpha-black-55: #0000008c;
+  --prim-alpha-ink-90: #17181ce6;
+  --prim-alpha-white-40: #ffffff66;
+  --prim-alpha-white-50: #ffffff80;
+  --prim-alpha-white-65: #ffffffa6;
+  --prim-alpha-white-85: #ffffffd9;
+  --prim-alpha-slate-45: #787e8c73;
+  --prim-indigo-50: #dce8ff;
+  --prim-indigo-400: #5577e5;
+  --prim-indigo-500: #4163e4;
+  --prim-cyan-400: #3bcfcf;
+  --prim-red-500: #fe2c55;
+  --prim-flame-core: #ffe590;
+  --prim-flame-orange: #f77f00;
+  --prim-flame-ink: #e16c10;
+  --prim-flame-muted: #e9bf8e;
+  --prim-flame-tier-3d: #ec7d00;
+  --prim-flame-tier-10d: #f6722b;
+  --prim-flame-tier-30d: #fa695c;
+  --prim-flame-tier-100d: #f167a4;
+  --prim-flame-tier-200d: #b97df7;
+  --prim-green-50: #d9f0d3;
+  --prim-green-100: #d3f2cd;
+  --prim-green-200: #b8e1b8;
+  --prim-green-400: #7dbf6e;
+  --prim-green-500: #6bac5c;
+  --prim-green-600: #357426;
+  --prim-sage-700: #5c7a5f;
+  --prim-sage-800: #3d5a41;
+  --prim-sage-900: #2f4a33;
+  --prim-linen-100: #f4f4f2;
+  --prim-frost-100: #f1f1f3;
+  --prim-frost-200: #e3e5eb;
+  --prim-frost-300: #c6cad4;
+  --prim-frost-400: #a9b1c2;
+  --prim-frost-500: #8f98ab;
+  --prim-frost-600: #7a7d86;
+  --prim-frost-800: #3a3f4c;
+  --prim-frost-850: #2d3b55;
+  --prim-frost-900: #1f2a40;
+  --prim-frost-body-top: #ceeefe;
+  --prim-frost-body-bottom: #88bfe6;
+  --prim-honey-body-top: #ffe196;
+  --prim-honey-body-bottom: #f6bc5d;
+  --prim-honey-ink: #4a3520;
+  --prim-blush-300: #f8a49d;
+  --prim-coral-100: #ffcfca;
+  --prim-coral-800: #7a3430;
+  --prim-sky-100: #b2e8fa;
+  --prim-sky-800: #005872;
+  --prim-mint-100: #c0eacd;
+  --prim-mint-800: #095c34;
+  --prim-lilac-100: #ead4fc;
+  --prim-lilac-800: #5e3c75;
+  --prim-olive-100: #eadeb2;
+  --prim-olive-800: #5e4b00;
+  --prim-peach-100: #f3d8c4;
+  --prim-peach-800: #6c411a;
+  --prim-media-sand-1: #d9d4ca;
+  --prim-media-sand-2: #cfc9be;
+  --prim-media-sand-ink: #6b665c;
+  --prim-media-mist-1: #cdd5d8;
+  --prim-media-mist-2: #c3cbcf;
+  --prim-media-mist-ink: #5d666b;
+  --prim-media-rose-1: #dcd3d9;
+  --prim-media-rose-2: #d2c8cf;
+  --prim-media-rose-ink: #6a5f66;
+  --prim-media-night-1: #2a2f3a;
+  --prim-media-night-2: #323846;
+  --prim-dusk-top: #2e3a5c;
+  --prim-dusk-bottom: #b9737e;
+
+  /* Semantic color */
+  --color-bg-canvas: var(--prim-neutral-0);
+  --color-bg-subtle: var(--prim-neutral-100);
+  --color-bg-sunken: var(--prim-neutral-50);
+  --color-bg-pressed: var(--prim-neutral-50);
+  --color-bg-inverse: var(--prim-neutral-950);
+  --color-bg-scrim: var(--prim-alpha-black-45);
+  --color-bg-toast: var(--prim-alpha-ink-90);
+  --color-bg-media: var(--prim-neutral-1000);
+  --color-bg-media-scrim: var(--prim-alpha-black-55);
+  --color-bg-lock-top: var(--prim-dusk-top);
+  --color-bg-lock-bottom: var(--prim-dusk-bottom);
+  --color-bg-notification: var(--prim-alpha-white-85);
+  --color-text-primary: var(--prim-neutral-900);
+  --color-text-secondary: var(--prim-neutral-700);
+  --color-text-tertiary: var(--prim-neutral-500);
+  --color-text-disabled: var(--prim-neutral-400);
+  --color-text-on-accent: var(--prim-neutral-0);
+  --color-text-link: var(--prim-red-500);
+  --color-text-on-media: var(--prim-neutral-0);
+  --color-icon-default: var(--prim-neutral-900);
+  --color-icon-subtle: var(--prim-neutral-800);
+  --color-icon-muted: var(--prim-neutral-600);
+  --color-icon-disabled: var(--prim-neutral-350);
+  --color-icon-on-accent: var(--prim-neutral-0);
+  --color-icon-on-media: var(--prim-neutral-0);
+  --color-icon-like: var(--prim-red-500);
+  --color-border-subtle: var(--prim-neutral-150);
+  --color-border-handle: var(--prim-neutral-250);
+  --color-border-on-media: var(--prim-neutral-0);
+  --color-border-bubble: var(--prim-neutral-150);
+  --color-border-divider: var(--prim-neutral-200);
+  --color-accent-default: var(--prim-red-500);
+  --color-accent-subtle: var(--prim-indigo-50);
+  --color-accent-story-start: var(--prim-cyan-400);
+  --color-accent-story-end: var(--prim-red-500);
+  --color-bubble-outgoing: var(--prim-neutral-100);
+  --color-bubble-incoming: var(--prim-neutral-0);
+  --color-control-track-off: var(--prim-neutral-250);
+  --color-control-track-on: var(--prim-red-500);
+  --color-control-thumb: var(--prim-neutral-0);
+  --color-control-segment-bg: var(--prim-neutral-100);
+  --color-control-segment-selected: var(--prim-neutral-0);
+  --color-control-chip: var(--prim-neutral-100);
+  --color-control-chip-selected: var(--prim-red-500);
+  --color-button-primary-bg: var(--prim-red-500);
+  --color-button-primary-text: var(--prim-neutral-0);
+  --color-button-secondary-bg: var(--prim-neutral-100);
+  --color-button-secondary-text: var(--prim-neutral-900);
+  --color-badge-core: var(--prim-flame-core);
+  --color-badge-tier-3d: var(--prim-flame-tier-3d);
+  --color-badge-tier-10d: var(--prim-flame-tier-10d);
+  --color-badge-tier-30d: var(--prim-flame-tier-30d);
+  --color-badge-tier-100d: var(--prim-flame-tier-100d);
+  --color-badge-tier-200d: var(--prim-flame-tier-200d);
+  --color-badge-locked: var(--prim-neutral-250);
+  --color-badge-label-earned: var(--prim-neutral-900);
+  --color-badge-label-locked: var(--prim-neutral-400);
+  --color-badge-connector: var(--prim-neutral-200);
+  --color-media-sand-a: var(--prim-media-sand-1);
+  --color-media-sand-b: var(--prim-media-sand-2);
+  --color-media-sand-ink: var(--prim-media-sand-ink);
+  --color-media-mist-a: var(--prim-media-mist-1);
+  --color-media-mist-b: var(--prim-media-mist-2);
+  --color-media-mist-ink: var(--prim-media-mist-ink);
+  --color-media-rose-a: var(--prim-media-rose-1);
+  --color-media-rose-b: var(--prim-media-rose-2);
+  --color-media-rose-ink: var(--prim-media-rose-ink);
+  --color-media-night-a: var(--prim-media-night-1);
+  --color-media-night-b: var(--prim-media-night-2);
+  --color-avatar-coral-bg: var(--prim-coral-100);
+  --color-avatar-coral-ink: var(--prim-coral-800);
+  --color-avatar-sky-bg: var(--prim-sky-100);
+  --color-avatar-sky-ink: var(--prim-sky-800);
+  --color-avatar-mint-bg: var(--prim-mint-100);
+  --color-avatar-mint-ink: var(--prim-mint-800);
+  --color-avatar-lilac-bg: var(--prim-lilac-100);
+  --color-avatar-lilac-ink: var(--prim-lilac-800);
+  --color-avatar-olive-bg: var(--prim-olive-100);
+  --color-avatar-olive-ink: var(--prim-olive-800);
+  --color-avatar-peach-bg: var(--prim-peach-100);
+  --color-avatar-peach-ink: var(--prim-peach-800);
+
+  /* Streak: Redesign mode (default) */
+  --streak-flame-done: var(--prim-flame-muted);
+  --streak-flame-pending: var(--prim-flame-muted);
+  --streak-count-done: var(--prim-neutral-400);
+  --streak-count-pending: var(--prim-neutral-400);
+  --pet-bg-top: var(--prim-green-200);
+  --pet-bg-mid: var(--prim-green-50);
+  --pet-bg-bottom: var(--prim-linen-100);
+  --pet-chip-name-bg: var(--prim-alpha-white-50);
+  --pet-chip-icon-bg: var(--prim-alpha-white-40);
+  --pet-chip-content: var(--prim-sage-900);
+  --pet-progress-fill: var(--prim-green-400);
+  --pet-progress-text: var(--prim-sage-900);
+  --pet-status-text: var(--prim-sage-800);
+  --pet-body-top: var(--prim-honey-body-top);
+  --pet-body-bottom: var(--prim-honey-body-bottom);
+  --pet-face: var(--prim-honey-ink);
+  --pet-cheek: var(--prim-blush-300);
+  --task-done-bg: var(--prim-green-100);
+  --task-done-icon: var(--prim-green-600);
+  --task-points: var(--prim-green-600);
+  --streak-label-flame-size: 8px;
+  --streak-label-font-size: 12px;
+  --streak-label-font-weight: 500;
+  --streak-label-gap: 4px;
+
+  /* Dimension */
+  --space-0: 0px;
+  --space-2xs: 2px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+  --size-avatar-xs: 32px;
+  --size-avatar-sm: 36px;
+  --size-avatar-md: 44px;
+  --size-avatar-lg: 52px;
+  --size-avatar-xl: 64px;
+  --size-icon-xs: 16px;
+  --size-icon-sm: 20px;
+  --size-icon-md: 24px;
+  --size-icon-lg: 28px;
+  --size-icon-xl: 36px;
+  --size-control-button: 48px;
+  --size-control-input: 44px;
+  --size-control-tap-target: 44px;
+  --size-control-toggle-width: 44px;
+  --size-control-toggle-height: 24px;
+  --size-control-toggle-thumb: 20px;
+  --size-control-badge: 20px;
+  --size-control-status-bar: 32px;
+  --size-control-bottom-nav: 64px;
+  --size-control-header: 56px;
+  --border-width-hairline: 1px;
+  --border-width-avatar-ring: 2px;
+
+  /* Typography */
+  --font-family: 'DM Sans', system-ui, sans-serif;
+
+  /* Elevation */
+  --shadow-thumb: 0 1px 2px #00000033;
+  --shadow-segment: 0 1px 3px #0000001f;
+  --shadow-device: 0 20px 50px #0000002e;
+  --shadow-sheet: 0 -4px 24px #0000001f;
+}
+
+[data-streak="current"] {
+  --streak-flame-done: var(--prim-flame-orange);
+  --streak-flame-pending: var(--prim-neutral-300);
+  --streak-count-done: var(--prim-flame-ink);
+  --streak-count-pending: var(--prim-neutral-400);
+  --pet-bg-top: var(--prim-frost-300);
+  --pet-bg-mid: var(--prim-frost-200);
+  --pet-bg-bottom: var(--prim-frost-100);
+  --pet-chip-name-bg: var(--prim-alpha-slate-45);
+  --pet-chip-icon-bg: var(--prim-alpha-white-40);
+  --pet-chip-content: var(--prim-neutral-0);
+  --pet-progress-fill: var(--prim-frost-500);
+  --pet-progress-text: var(--prim-frost-800);
+  --pet-status-text: var(--prim-frost-600);
+  --pet-body-top: var(--prim-frost-body-top);
+  --pet-body-bottom: var(--prim-frost-body-bottom);
+  --pet-face: var(--prim-frost-900);
+  --pet-cheek: var(--prim-frost-body-top);
+  --task-done-bg: var(--prim-neutral-150);
+  --task-done-icon: var(--prim-neutral-500);
+  --task-points: var(--prim-neutral-900);
+  --streak-label-flame-size: 12px;
+  --streak-label-font-size: 16px;
+  --streak-label-font-weight: 600;
+  --streak-label-gap: 4px;
+}
+
+/* Text styles */
+.text-display-streak-count { font-family: var(--font-family); font-size: 56px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+.text-headline { font-family: var(--font-family); font-size: 20px; font-weight: 700; line-height: 1.3; }
+.text-title { font-family: var(--font-family); font-size: 18px; font-weight: 700; line-height: 1.3; }
+.text-body-lg { font-family: var(--font-family); font-size: 16px; font-weight: 400; line-height: 1.3; }
+.text-body-lg-strong { font-family: var(--font-family); font-size: 16px; font-weight: 600; line-height: 1.3; }
+.text-body { font-family: var(--font-family); font-size: 15px; font-weight: 400; line-height: 1.35; }
+.text-body-strong { font-family: var(--font-family); font-size: 15px; font-weight: 600; line-height: 1.35; }
+.text-body-sm { font-family: var(--font-family); font-size: 14px; font-weight: 400; line-height: 1.4; }
+.text-body-sm-strong { font-family: var(--font-family); font-size: 14px; font-weight: 600; line-height: 1.4; }
+.text-footnote { font-family: var(--font-family); font-size: 13px; font-weight: 400; line-height: 1.4; }
+.text-footnote-medium { font-family: var(--font-family); font-size: 13px; font-weight: 500; line-height: 1.4; }
+.text-caption { font-family: var(--font-family); font-size: 12px; font-weight: 400; line-height: 1.35; }
+.text-caption-medium { font-family: var(--font-family); font-size: 12px; font-weight: 500; line-height: 1.35; }
+.text-micro { font-family: var(--font-family); font-size: 11px; font-weight: 500; line-height: 1.3; }
+.text-lock-time { font-family: var(--font-family); font-size: 64px; font-weight: 500; line-height: 1; letter-spacing: -0.02em; }
